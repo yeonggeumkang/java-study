@@ -12,14 +12,29 @@ public class Reference {
 		boolean result = var1.equals(var3);
 		System.out.println(result0 +" "+ result);
 		
-		//배열 : 타입[] 변수명; 혹은 타입 변수명[]; 으로 생성한다
-		int[] intArray = {0,1,2,3};
-		String strArray[] = null; //참조할 객체가 없으면 null초기화로 생성
+		//5.6 배열타입(p.149)
 		
-		for(int i=0; i<intArray.length; i++) {
-			System.out.println(intArray[i]);
-		}
+		//여러가지 선언 방법
+		int intArray[];
+		int[] intArray2;
+	
+		String[] strArray = null;
+		int intArray3[] = {0,1,2,3};
 		
+		strArray = new String[] {"일", "이","삼"};
+		strArray[0] = "영으로 바꿈";
+		
+		//다차원배열
+		int[][] scores = new int[2][3];
+		scores[0] = new int[2];
+		scores[1] = new int[3];
+		
+		int[][] scores2 = {{90,88}, {100,70}};
+		
+		//객체를 참ㅈ모하느 배열 (String) 문자열이 아닌 문자열이 저장된 string 객체의 주소를 저자함
+		strArray = new String[] {"java", "C++", "C#"};
+		
+	
 	}
 
 }
