@@ -20,4 +20,22 @@ public class Calculator {
 	void powerOff() {
 		System.out.println("전원을 끕니다");
 	}
+	
+	//매개변수의 수를 모를 경우(p.219) : 매개 변수를 배열 타입으로 선언한다.
+	// ... 사용해서 선언하면, 자동으로 배열이 생성되어 매개값으로 넘겨짐.
+	int sum1(int[] values) {
+		int sum = 0;
+		for (int i=0; i<values.length; i++) {
+			sum += values[i];
+		}
+		return sum;
+	}
+	
+	int sum2(int ... values) {
+		int sum = 0;
+		for(int i=0; i<values.length; i++) {
+			sum += values[i];
+		}
+		return sum;
+	}
 }
